@@ -5877,7 +5877,7 @@ class SigninComponent {
                 username: this.form.get('email').value,
                 password: this.form.get('password').value
             };
-            this.http.post('http://share2riches.com/users/authenticate', reqData).subscribe((response) => {
+            this.http.post('http://share2riches.com:4000/users/authenticate', reqData).subscribe((response) => {
                 console.log('response: ', response);
                 const { token, email } = response;
                 if (!token)

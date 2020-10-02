@@ -43,7 +43,7 @@ export class SigninComponent implements OnInit {
         username: this.form.get('email').value,
         password: this.form.get('password').value
       }
-      this.http.post('http://share2riches.com/users/authenticate', reqData).subscribe(
+      this.http.post('http://share2riches.com:4000/users/authenticate', reqData).subscribe(
         (response: any) => {
           console.log('response: ', response)
 

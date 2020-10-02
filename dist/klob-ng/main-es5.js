@@ -11766,7 +11766,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               username: this.form.get('email').value,
               password: this.form.get('password').value
             };
-            this.http.post('http://share2riches.com/users/authenticate', reqData).subscribe(function (response) {
+            this.http.post('http://share2riches.com:4000/users/authenticate', reqData).subscribe(function (response) {
               console.log('response: ', response);
               var token = response.token,
                   email = response.email;
