@@ -17,7 +17,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AuthGuard } from './core/guards';
 
 const routes: Routes = [
-  { path: '', canActivate: [AuthGuard], component: DefaultComponent },
+  { path: '',  component: DefaultComponent },
   { path: 'demo-2', canActivate: [AuthGuard], component: DemoTwoComponent },
   { path: 'demo-3', canActivate: [AuthGuard], component: DemoThreeComponent },
   { path: 'about-us', canActivate: [AuthGuard], component: AboutComponent },

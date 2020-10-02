@@ -51,7 +51,7 @@ export class SigninComponent implements OnInit {
 
           if (!token) return;
           localStorage.setItem('auth:token', token);
-          email === 'admin@admin.com' ? this.router.navigateByUrl('/admin') : this.router.navigateByUrl('/');
+          email === 'admin123@admin.com' ? this.router.navigateByUrl('/admin') : window.location.href = 'http://app.share2riches.com:4000';
         },
         (error: any) => {
           console.log(error.error['message']);
