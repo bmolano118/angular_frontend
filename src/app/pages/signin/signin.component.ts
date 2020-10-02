@@ -47,11 +47,11 @@ export class SigninComponent implements OnInit {
         (response: any) => {
           console.log('response: ', response)
 
-          const {token, email} = response
+          const {token, username} = response
 
           if (!token) return;
           localStorage.setItem('auth:token', token);
-          email === 'admin123@admin.com' ? this.router.navigateByUrl('/admin') : window.location.href = 'http://app.share2riches.com:4000';
+          username === 'admin123@admin.com' ? this.router.navigateByUrl('/admin') : window.location.href = 'http://app.share2riches.com:4000';
         },
         (error: any) => {
           console.log(error.error['message']);
