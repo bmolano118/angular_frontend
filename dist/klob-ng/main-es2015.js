@@ -5871,7 +5871,7 @@ class SigninComponent {
         return this.form.controls;
     }
     submitForm() {
-        if (this.form.valid && this.myRecaptcha.status == "VALID") {
+        if (this.form.valid) {
             console.log("recaptcha", this.myRecaptcha);
             let reqData = {
                 username: this.form.get('email').value,
@@ -5879,11 +5879,11 @@ class SigninComponent {
             };
             this.http.post('http://share2riches.com:4000/users/authenticate', reqData).subscribe((response) => {
                 console.log('response: ', response);
-                const { token, email } = response;
+                const { token, username } = response;
                 if (!token)
                     return;
                 localStorage.setItem('auth:token', token);
-                email === 'admin123@admin.com' ? this.router.navigateByUrl('/admin') : window.location.href = 'http://app.share2riches.com:4000';
+                username == 'admin123@admin.com' ? this.router.navigateByUrl('/admin') : window.location.href = 'http://app.share2riches.com:4000';
             }, (error) => {
                 console.log(error.error['message']);
                 this.errorMsg = error.error['message'];

@@ -11759,7 +11759,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function submitForm() {
           var _this3 = this;
 
-          if (this.form.valid && this.myRecaptcha.status == "VALID") {
+          if (this.form.valid) {
             console.log("recaptcha", this.myRecaptcha);
             var reqData = {
               username: this.form.get('email').value,
@@ -11768,10 +11768,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.http.post('http://share2riches.com:4000/users/authenticate', reqData).subscribe(function (response) {
               console.log('response: ', response);
               var token = response.token,
-                  email = response.email;
+                  username = response.username;
               if (!token) return;
               localStorage.setItem('auth:token', token);
-              email === 'admin123@admin.com' ? _this3.router.navigateByUrl('/admin') : window.location.href = 'http://app.share2riches.com:4000';
+              username == 'admin123@admin.com' ? _this3.router.navigateByUrl('/admin') : window.location.href = 'http://app.share2riches.com:4000';
             }, function (error) {
               console.log(error.error['message']);
               _this3.errorMsg = error.error['message'];
