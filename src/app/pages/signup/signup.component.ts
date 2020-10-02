@@ -31,6 +31,7 @@ export class SignupComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
+      role: 'common',
     }, {
       validator: MustMatch('password', 'confirmPassword')
     })

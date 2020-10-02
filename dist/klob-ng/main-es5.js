@@ -12176,7 +12176,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           lastName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
           email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].email]],
           password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-          confirmPassword: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
+          confirmPassword: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+          role: 'common'
         }, {
           validator: Object(_mustMatch__WEBPACK_IMPORTED_MODULE_2__["MustMatch"])('password', 'confirmPassword')
         });
