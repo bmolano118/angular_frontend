@@ -17,24 +17,24 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AuthGuard } from './core/guards';
 
 const routes: Routes = [
-    {path: '',canActivate:[AuthGuard] , component: DefaultComponent},
-    {path: 'demo-2',canActivate:[AuthGuard] , component: DemoTwoComponent},
-    {path: 'demo-3',canActivate:[AuthGuard] , component: DemoThreeComponent},
-    {path: 'about-us',canActivate:[AuthGuard] , component: AboutComponent},
-    {path: 'features',canActivate:[AuthGuard] , component: FeaturesComponent},
-    {path: 'team',canActivate:[AuthGuard] , component: TeamComponent},
-    {path: 'pricing',canActivate:[AuthGuard] , component: PricingComponent},
-    {path: 'faq',canActivate:[AuthGuard] , component: FaqComponent},
-    {path: 'blog',canActivate:[AuthGuard] , component: BlogComponent},
-    {path: 'blog-details',canActivate:[AuthGuard] , component: BlogDetailsComponent},
-    {path: 'contact',canActivate:[AuthGuard] , component: ContactComponent},
-    {path: 'signup', component: SignupComponent},
-    {path: 'signin', component: SigninComponent},
-    {path: '**', component: NotFoundComponent},
+  { path: '', canActivate: [AuthGuard], component: DefaultComponent },
+  { path: 'demo-2', canActivate: [AuthGuard], component: DemoTwoComponent },
+  { path: 'demo-3', canActivate: [AuthGuard], component: DemoThreeComponent },
+  { path: 'about-us', canActivate: [AuthGuard], component: AboutComponent },
+  { path: 'features', canActivate: [AuthGuard], component: FeaturesComponent },
+  { path: 'team', canActivate: [AuthGuard], component: TeamComponent },
+  { path: 'pricing', canActivate: [AuthGuard], component: PricingComponent },
+  { path: 'faq', canActivate: [AuthGuard], component: FaqComponent },
+  { path: 'blog', canActivate: [AuthGuard], component: BlogComponent },
+  { path: 'blog-details', canActivate: [AuthGuard], component: BlogDetailsComponent },
+  { path: 'contact', canActivate: [AuthGuard], component: ContactComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'signin', component: SigninComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: false})],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

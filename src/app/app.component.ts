@@ -24,6 +24,7 @@ export class AppComponent {
         location: Location
         ){
         this.router.events.subscribe((ev) => {
+          console.log(ev);
           if (ev instanceof NavigationStart) {
             $('.preloader').fadeIn();
           }
@@ -32,5 +33,6 @@ export class AppComponent {
             $('.preloader').fadeOut('slow');
           }
         });
+        $('.preloader').fadeOut('slow');
     }
 }
