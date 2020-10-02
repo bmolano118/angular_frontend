@@ -5879,11 +5879,11 @@ class SigninComponent {
             };
             this.http.post('http://share2riches.com/users/authenticate', reqData).subscribe((response) => {
                 console.log('response: ', response);
-                const { token, role } = response;
+                const { token, email } = response;
                 if (!token)
                     return;
                 localStorage.setItem('auth:token', token);
-                role === 'admin' ? this.router.navigateByUrl('/admin') : this.router.navigateByUrl('/');
+                email === 'admin@admin.com' ? this.router.navigateByUrl('/admin') : this.router.navigateByUrl('/');
             }, (error) => {
                 console.log(error.error['message']);
                 this.errorMsg = error.error['message'];
@@ -6079,7 +6079,6 @@ class SignupComponent {
             email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].email]],
             password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             confirmPassword: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            role: 'common',
         }, {
             validator: Object(_mustMatch__WEBPACK_IMPORTED_MODULE_2__["MustMatch"])('password', 'confirmPassword')
         });
@@ -6103,7 +6102,7 @@ class SignupComponent {
                 firstName: this.form.get('firstName').value,
                 lastName: this.form.get('lastName').value,
                 username: this.form.get('email').value,
-                password: this.form.get('password').value
+                password: this.form.get('password').value,
             };
             this.http.post('http://share2riches.com:4000/users/register', reqData).subscribe((response) => {
                 console.log(response);

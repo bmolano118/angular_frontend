@@ -31,7 +31,6 @@ export class SignupComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
-      role: 'common',
     }, {
       validator: MustMatch('password', 'confirmPassword')
     })
@@ -53,7 +52,7 @@ export class SignupComponent implements OnInit {
         firstName: this.form.get('firstName').value,
         lastName: this.form.get('lastName').value,
         username: this.form.get('email').value,
-        password: this.form.get('password').value
+        password: this.form.get('password').value,
       }
       this.http.post('http://share2riches.com:4000/users/register', reqData).subscribe(
         (response: any) => {

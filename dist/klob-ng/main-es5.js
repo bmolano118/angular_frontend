@@ -11769,10 +11769,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.http.post('http://share2riches.com/users/authenticate', reqData).subscribe(function (response) {
               console.log('response: ', response);
               var token = response.token,
-                  role = response.role;
+                  email = response.email;
               if (!token) return;
               localStorage.setItem('auth:token', token);
-              role === 'admin' ? _this3.router.navigateByUrl('/admin') : _this3.router.navigateByUrl('/');
+              email === 'admin@admin.com' ? _this3.router.navigateByUrl('/admin') : _this3.router.navigateByUrl('/');
             }, function (error) {
               console.log(error.error['message']);
               _this3.errorMsg = error.error['message'];
@@ -12176,8 +12176,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           lastName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
           email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].email]],
           password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-          confirmPassword: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-          role: 'common'
+          confirmPassword: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
         }, {
           validator: Object(_mustMatch__WEBPACK_IMPORTED_MODULE_2__["MustMatch"])('password', 'confirmPassword')
         });

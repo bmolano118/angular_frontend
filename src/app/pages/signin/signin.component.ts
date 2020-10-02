@@ -47,11 +47,11 @@ export class SigninComponent implements OnInit {
         (response: any) => {
           console.log('response: ', response)
 
-          const {token, role} = response
+          const {token, email} = response
 
           if (!token) return;
           localStorage.setItem('auth:token', token);
-          role === 'admin' ? this.router.navigateByUrl('/admin') : this.router.navigateByUrl('/');
+          email === 'admin@admin.com' ? this.router.navigateByUrl('/admin') : this.router.navigateByUrl('/');
         },
         (error: any) => {
           console.log(error.error['message']);
