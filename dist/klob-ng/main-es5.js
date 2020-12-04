@@ -150,6 +150,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! ./pages/contact/contact.component */
     "./src/app/pages/contact/contact.component.ts");
+    /* harmony import */
+
+
+    var _ref_ref_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    /*! ./ref/ref.component */
+    "./src/app/ref/ref.component.ts");
 
     var routes = [{
       path: '',
@@ -190,6 +196,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'signin',
       component: _pages_signin_signin_component__WEBPACK_IMPORTED_MODULE_14__["SigninComponent"]
+    }, {
+      path: 'ref/:username',
+      component: _ref_ref_component__WEBPACK_IMPORTED_MODULE_16__["RefComponent"]
     }, {
       path: '**',
       component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_9__["NotFoundComponent"]
@@ -596,7 +605,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _core_core_module__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
     /*! ./core/core.module */
-    "./src/app/core/core.module.ts"); // import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+    "./src/app/core/core.module.ts");
+    /* harmony import */
+
+
+    var _ref_ref_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
+    /*! ./ref/ref.component */
+    "./src/app/ref/ref.component.ts"); // import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 
     var AppModule = function AppModule() {
@@ -620,7 +635,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _demos_default_default_component__WEBPACK_IMPORTED_MODULE_7__["DefaultComponent"], _common_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_8__["FeedbackComponent"], _demos_demo_two_demo_two_component__WEBPACK_IMPORTED_MODULE_9__["DemoTwoComponent"], _demos_demo_three_demo_three_component__WEBPACK_IMPORTED_MODULE_10__["DemoThreeComponent"], _common_funfact_funfact_component__WEBPACK_IMPORTED_MODULE_11__["FunfactComponent"], _pages_about_about_component__WEBPACK_IMPORTED_MODULE_12__["AboutComponent"], _common_partner_partner_component__WEBPACK_IMPORTED_MODULE_13__["PartnerComponent"], _pages_features_features_component__WEBPACK_IMPORTED_MODULE_14__["FeaturesComponent"], _common_download_download_component__WEBPACK_IMPORTED_MODULE_15__["DownloadComponent"], _common_account_button_account_button_component__WEBPACK_IMPORTED_MODULE_16__["AccountButtonComponent"], _common_talk_button_talk_button_component__WEBPACK_IMPORTED_MODULE_17__["TalkButtonComponent"], _pages_team_team_component__WEBPACK_IMPORTED_MODULE_18__["TeamComponent"], _pages_pricing_pricing_component__WEBPACK_IMPORTED_MODULE_19__["PricingComponent"], _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_20__["NotFoundComponent"], _pages_faq_faq_component__WEBPACK_IMPORTED_MODULE_21__["FaqComponent"], _pages_blog_blog_component__WEBPACK_IMPORTED_MODULE_22__["BlogComponent"], _pages_blog_details_blog_details_component__WEBPACK_IMPORTED_MODULE_23__["BlogDetailsComponent"], _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_24__["SignupComponent"], _pages_signin_signin_component__WEBPACK_IMPORTED_MODULE_25__["SigninComponent"], _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_26__["ContactComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _demos_default_default_component__WEBPACK_IMPORTED_MODULE_7__["DefaultComponent"], _common_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_8__["FeedbackComponent"], _demos_demo_two_demo_two_component__WEBPACK_IMPORTED_MODULE_9__["DemoTwoComponent"], _demos_demo_three_demo_three_component__WEBPACK_IMPORTED_MODULE_10__["DemoThreeComponent"], _common_funfact_funfact_component__WEBPACK_IMPORTED_MODULE_11__["FunfactComponent"], _pages_about_about_component__WEBPACK_IMPORTED_MODULE_12__["AboutComponent"], _common_partner_partner_component__WEBPACK_IMPORTED_MODULE_13__["PartnerComponent"], _pages_features_features_component__WEBPACK_IMPORTED_MODULE_14__["FeaturesComponent"], _common_download_download_component__WEBPACK_IMPORTED_MODULE_15__["DownloadComponent"], _common_account_button_account_button_component__WEBPACK_IMPORTED_MODULE_16__["AccountButtonComponent"], _common_talk_button_talk_button_component__WEBPACK_IMPORTED_MODULE_17__["TalkButtonComponent"], _pages_team_team_component__WEBPACK_IMPORTED_MODULE_18__["TeamComponent"], _pages_pricing_pricing_component__WEBPACK_IMPORTED_MODULE_19__["PricingComponent"], _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_20__["NotFoundComponent"], _pages_faq_faq_component__WEBPACK_IMPORTED_MODULE_21__["FaqComponent"], _pages_blog_blog_component__WEBPACK_IMPORTED_MODULE_22__["BlogComponent"], _pages_blog_details_blog_details_component__WEBPACK_IMPORTED_MODULE_23__["BlogDetailsComponent"], _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_24__["SignupComponent"], _pages_signin_signin_component__WEBPACK_IMPORTED_MODULE_25__["SigninComponent"], _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_26__["ContactComponent"], _ref_ref_component__WEBPACK_IMPORTED_MODULE_31__["RefComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_2__["SlickCarouselModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_27__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_28__["HttpClientModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_27__["ReactiveFormsModule"], angular_google_recaptcha__WEBPACK_IMPORTED_MODULE_29__["RecaptchaModule"], _core_core_module__WEBPACK_IMPORTED_MODULE_30__["CoreModule"]]
       });
     })();
@@ -631,7 +646,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _demos_default_default_component__WEBPACK_IMPORTED_MODULE_7__["DefaultComponent"], _common_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_8__["FeedbackComponent"], _demos_demo_two_demo_two_component__WEBPACK_IMPORTED_MODULE_9__["DemoTwoComponent"], _demos_demo_three_demo_three_component__WEBPACK_IMPORTED_MODULE_10__["DemoThreeComponent"], _common_funfact_funfact_component__WEBPACK_IMPORTED_MODULE_11__["FunfactComponent"], _pages_about_about_component__WEBPACK_IMPORTED_MODULE_12__["AboutComponent"], _common_partner_partner_component__WEBPACK_IMPORTED_MODULE_13__["PartnerComponent"], _pages_features_features_component__WEBPACK_IMPORTED_MODULE_14__["FeaturesComponent"], _common_download_download_component__WEBPACK_IMPORTED_MODULE_15__["DownloadComponent"], _common_account_button_account_button_component__WEBPACK_IMPORTED_MODULE_16__["AccountButtonComponent"], _common_talk_button_talk_button_component__WEBPACK_IMPORTED_MODULE_17__["TalkButtonComponent"], _pages_team_team_component__WEBPACK_IMPORTED_MODULE_18__["TeamComponent"], _pages_pricing_pricing_component__WEBPACK_IMPORTED_MODULE_19__["PricingComponent"], _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_20__["NotFoundComponent"], _pages_faq_faq_component__WEBPACK_IMPORTED_MODULE_21__["FaqComponent"], _pages_blog_blog_component__WEBPACK_IMPORTED_MODULE_22__["BlogComponent"], _pages_blog_details_blog_details_component__WEBPACK_IMPORTED_MODULE_23__["BlogDetailsComponent"], _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_24__["SignupComponent"], _pages_signin_signin_component__WEBPACK_IMPORTED_MODULE_25__["SigninComponent"], _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_26__["ContactComponent"]],
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _demos_default_default_component__WEBPACK_IMPORTED_MODULE_7__["DefaultComponent"], _common_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_8__["FeedbackComponent"], _demos_demo_two_demo_two_component__WEBPACK_IMPORTED_MODULE_9__["DemoTwoComponent"], _demos_demo_three_demo_three_component__WEBPACK_IMPORTED_MODULE_10__["DemoThreeComponent"], _common_funfact_funfact_component__WEBPACK_IMPORTED_MODULE_11__["FunfactComponent"], _pages_about_about_component__WEBPACK_IMPORTED_MODULE_12__["AboutComponent"], _common_partner_partner_component__WEBPACK_IMPORTED_MODULE_13__["PartnerComponent"], _pages_features_features_component__WEBPACK_IMPORTED_MODULE_14__["FeaturesComponent"], _common_download_download_component__WEBPACK_IMPORTED_MODULE_15__["DownloadComponent"], _common_account_button_account_button_component__WEBPACK_IMPORTED_MODULE_16__["AccountButtonComponent"], _common_talk_button_talk_button_component__WEBPACK_IMPORTED_MODULE_17__["TalkButtonComponent"], _pages_team_team_component__WEBPACK_IMPORTED_MODULE_18__["TeamComponent"], _pages_pricing_pricing_component__WEBPACK_IMPORTED_MODULE_19__["PricingComponent"], _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_20__["NotFoundComponent"], _pages_faq_faq_component__WEBPACK_IMPORTED_MODULE_21__["FaqComponent"], _pages_blog_blog_component__WEBPACK_IMPORTED_MODULE_22__["BlogComponent"], _pages_blog_details_blog_details_component__WEBPACK_IMPORTED_MODULE_23__["BlogDetailsComponent"], _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_24__["SignupComponent"], _pages_signin_signin_component__WEBPACK_IMPORTED_MODULE_25__["SigninComponent"], _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_26__["ContactComponent"], _ref_ref_component__WEBPACK_IMPORTED_MODULE_31__["RefComponent"]],
           imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_2__["SlickCarouselModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_27__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_28__["HttpClientModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_27__["ReactiveFormsModule"], angular_google_recaptcha__WEBPACK_IMPORTED_MODULE_29__["RecaptchaModule"].forRoot({
             siteKey: '6Le5YNIZAAAAAENTEtBCW06kaQpyYm0Y639yoPBl'
           }), _core_core_module__WEBPACK_IMPORTED_MODULE_30__["CoreModule"]],
@@ -12804,6 +12819,116 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }]
       }], function () {
         return [];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/ref/ref.component.ts":
+  /*!**************************************!*\
+    !*** ./src/app/ref/ref.component.ts ***!
+    \**************************************/
+
+  /*! exports provided: RefComponent */
+
+  /***/
+  function srcAppRefRefComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "RefComponent", function () {
+      return RefComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+    var RefComponent = /*#__PURE__*/function () {
+      function RefComponent(route, router, http) {
+        _classCallCheck(this, RefComponent);
+
+        this.route = route;
+        this.router = router;
+        this.http = http;
+        this.username = '';
+        this.baseApi = 'http://share2riches.com:4000';
+      }
+
+      _createClass(RefComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          var _this5 = this;
+
+          this.route.paramMap.subscribe(function (params) {
+            _this5.username = Object.values(params)[0].username;
+            console.log('username', _this5.username);
+          }); // window.location.href = 'http://app.share2riches.com/#/ref/' + this.username;
+
+          window.location.href = 'http://app.share2riches.com/#/authentication/ref/' + this.username;
+        }
+      }]);
+
+      return RefComponent;
+    }();
+
+    RefComponent.ɵfac = function RefComponent_Factory(t) {
+      return new (t || RefComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+    };
+
+    RefComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: RefComponent,
+      selectors: [["app-ref"]],
+      decls: 2,
+      vars: 0,
+      template: function RefComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "ref works!");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      },
+      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlZi9yZWYuY29tcG9uZW50LnNjc3MifQ== */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](RefComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'app-ref',
+          templateUrl: './ref.component.html',
+          styleUrls: ['./ref.component.scss']
+        }]
+      }], function () {
+        return [{
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
+        }, {
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+        }];
       }, null);
     })();
     /***/

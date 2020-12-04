@@ -49,6 +49,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/signup/signup.component */ "./src/app/pages/signup/signup.component.ts");
 /* harmony import */ var _pages_signin_signin_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/signin/signin.component */ "./src/app/pages/signin/signin.component.ts");
 /* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
+/* harmony import */ var _ref_ref_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./ref/ref.component */ "./src/app/ref/ref.component.ts");
+
 
 
 
@@ -81,6 +83,7 @@ const routes = [
     { path: 'contact', component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_15__["ContactComponent"] },
     { path: 'signup', component: _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_13__["SignupComponent"] },
     { path: 'signin', component: _pages_signin_signin_component__WEBPACK_IMPORTED_MODULE_14__["SigninComponent"] },
+    { path: 'ref/:username', component: _ref_ref_component__WEBPACK_IMPORTED_MODULE_16__["RefComponent"] },
     { path: '**', component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_9__["NotFoundComponent"] },
 ];
 class AppRoutingModule {
@@ -226,6 +229,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var angular_google_recaptcha__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! angular-google-recaptcha */ "./node_modules/angular-google-recaptcha/__ivy_ngcc__/angular-google-recaptcha.js");
 /* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./core/core.module */ "./src/app/core/core.module.ts");
+/* harmony import */ var _ref_ref_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./ref/ref.component */ "./src/app/ref/ref.component.ts");
 
 
 
@@ -257,6 +261,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
 
 
 
@@ -300,7 +305,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _pages_blog_details_blog_details_component__WEBPACK_IMPORTED_MODULE_23__["BlogDetailsComponent"],
         _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_24__["SignupComponent"],
         _pages_signin_signin_component__WEBPACK_IMPORTED_MODULE_25__["SigninComponent"],
-        _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_26__["ContactComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_26__["ContactComponent"],
+        _ref_ref_component__WEBPACK_IMPORTED_MODULE_31__["RefComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
         ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_2__["SlickCarouselModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_27__["ReactiveFormsModule"],
@@ -333,7 +339,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _pages_blog_details_blog_details_component__WEBPACK_IMPORTED_MODULE_23__["BlogDetailsComponent"],
                     _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_24__["SignupComponent"],
                     _pages_signin_signin_component__WEBPACK_IMPORTED_MODULE_25__["SigninComponent"],
-                    _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_26__["ContactComponent"]
+                    _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_26__["ContactComponent"],
+                    _ref_ref_component__WEBPACK_IMPORTED_MODULE_31__["RefComponent"]
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -6396,6 +6403,58 @@ TeamComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
                 styleUrls: ['./team.component.scss']
             }]
     }], function () { return []; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/ref/ref.component.ts":
+/*!**************************************!*\
+  !*** ./src/app/ref/ref.component.ts ***!
+  \**************************************/
+/*! exports provided: RefComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RefComponent", function() { return RefComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+class RefComponent {
+    constructor(route, router, http) {
+        this.route = route;
+        this.router = router;
+        this.http = http;
+        this.username = '';
+        this.baseApi = 'http://share2riches.com:4000';
+    }
+    ngOnInit() {
+        this.route.paramMap.subscribe(params => {
+            this.username = Object.values(params)[0].username;
+            console.log('username', this.username);
+        });
+        // window.location.href = 'http://app.share2riches.com/#/ref/' + this.username;
+        window.location.href = 'http://app.share2riches.com/#/authentication/ref/' + this.username;
+    }
+}
+RefComponent.ɵfac = function RefComponent_Factory(t) { return new (t || RefComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
+RefComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: RefComponent, selectors: [["app-ref"]], decls: 2, vars: 0, template: function RefComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "ref works!");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlZi9yZWYuY29tcG9uZW50LnNjc3MifQ== */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](RefComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-ref',
+                templateUrl: './ref.component.html',
+                styleUrls: ['./ref.component.scss']
+            }]
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }, { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),
