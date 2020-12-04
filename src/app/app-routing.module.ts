@@ -14,9 +14,10 @@ import { BlogDetailsComponent } from './pages/blog-details/blog-details.componen
 import { SignupComponent } from './pages/signup/signup.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { RefComponent } from './ref/ref.component';
 
 const routes: Routes = [
-  { path: '',  component: DefaultComponent },
+  { path: '', component: DefaultComponent },
   { path: 'demo-2', component: DemoTwoComponent },
   { path: 'demo-3', component: DemoThreeComponent },
   { path: 'about-us', component: AboutComponent },
@@ -29,7 +30,9 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
+  { path: 'ref/:username', component: RefComponent },
   { path: '**', component: NotFoundComponent },
+  
 ];
 
 @NgModule({

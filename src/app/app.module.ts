@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RecaptchaModule } from 'angular-google-recaptcha';
 // import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { CoreModule } from './core/core.module';
+import { RefComponent } from './ref/ref.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { CoreModule } from './core/core.module';
     BlogDetailsComponent,
     SignupComponent,
     SigninComponent,
-    ContactComponent
+    ContactComponent,
+    RefComponent
   ],
   imports: [
     BrowserModule,
