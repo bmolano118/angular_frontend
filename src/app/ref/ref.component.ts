@@ -21,8 +21,9 @@ export class RefComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.username = Object.values(params)[0].username;
       console.log('username', this.username);
+      localStorage.setItem('ref:username', this.username);
     });
+    this.router.navigateByUrl('/');
     // window.location.href = 'http://app.share2riches.com/#/ref/' + this.username;
-    window.location.href = 'http://app.share2riches.com/#/authentication/ref/' + this.username;
   }
 }

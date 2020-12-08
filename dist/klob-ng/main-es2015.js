@@ -3504,6 +3504,7 @@ const _c0 = function () { return { exact: true }; };
 class HeaderComponent {
     constructor(router, location) {
         this.router = router;
+        this.username = '';
         this.router.events.subscribe((ev) => {
             if (ev instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"]) {
                 this.location = location.path();
@@ -3518,6 +3519,10 @@ class HeaderComponent {
     }
     ngOnInit() {
     }
+    login() {
+        this.username = localStorage.getItem('ref:username');
+        window.location.href = 'http://app.share2riches.com/#/authentication/ref/' + this.username;
+    }
 }
 HeaderComponent.ɵfac = function HeaderComponent_Factory(t) { return new (t || HeaderComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"])); };
 HeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HeaderComponent, selectors: [["app-header"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([
@@ -3525,7 +3530,7 @@ HeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
                 provide: _angular_common__WEBPACK_IMPORTED_MODULE_2__["LocationStrategy"],
                 useClass: _angular_common__WEBPACK_IMPORTED_MODULE_2__["PathLocationStrategy"]
             }
-        ])], decls: 75, vars: 6, consts: [[1, "luvion-nav"], [1, "container"], [1, "navbar", "navbar-expand-md", "navbar-light"], ["routerLink", "/", 1, "navbar-brand"], ["src", "assets/img/logo.png", "alt", "logo", 4, "ngIf"], ["src", "assets/img/black-logo.png", "alt", "logo"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarSupportedContent", "aria-controls", "navbarSupportedContent", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarSupportedContent", 1, "collapse", "navbar-collapse", "mean-menu"], [1, "navbar-nav"], [1, "nav-item"], ["href", "javascript:void(0)", 1, "nav-link"], [1, "fas", "fa-chevron-down"], [1, "dropdown-menu"], ["routerLink", "/", "routerLinkActive", "active", 1, "nav-link", 3, "routerLinkActiveOptions"], ["routerLink", "/demo-2", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/demo-3", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/about-us", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/features", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/team", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/pricing", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/error-404", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/faq", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/blog", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/blog-details", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/contact", "routerLinkActive", "active", 1, "nav-link"], [1, "others-options"], ["href", "http://app.share2riches.com/#/authentication/signin", "routerLinkActive", "active", 1, "login-btn"], [1, "flaticon-user"], ["src", "assets/img/logo.png", "alt", "logo"]], template: function HeaderComponent_Template(rf, ctx) { if (rf & 1) {
+        ])], decls: 75, vars: 6, consts: [[1, "luvion-nav"], [1, "container"], [1, "navbar", "navbar-expand-md", "navbar-light"], ["routerLink", "/", 1, "navbar-brand"], ["src", "assets/img/logo.png", "alt", "logo", 4, "ngIf"], ["src", "assets/img/black-logo.png", "alt", "logo"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarSupportedContent", "aria-controls", "navbarSupportedContent", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarSupportedContent", 1, "collapse", "navbar-collapse", "mean-menu"], [1, "navbar-nav"], [1, "nav-item"], ["href", "javascript:void(0)", 1, "nav-link"], [1, "fas", "fa-chevron-down"], [1, "dropdown-menu"], ["routerLink", "/", "routerLinkActive", "active", 1, "nav-link", 3, "routerLinkActiveOptions"], ["routerLink", "/demo-2", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/demo-3", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/about-us", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/features", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/team", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/pricing", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/error-404", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/faq", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/blog", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/blog-details", "routerLinkActive", "active", 1, "nav-link"], ["routerLink", "/contact", "routerLinkActive", "active", 1, "nav-link"], [1, "others-options"], ["onclick", "login()", "routerLinkActive", "active", 1, "login-btn"], [1, "flaticon-user"], ["src", "assets/img/logo.png", "alt", "logo"]], template: function HeaderComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
@@ -6436,9 +6441,10 @@ class RefComponent {
         this.route.paramMap.subscribe(params => {
             this.username = Object.values(params)[0].username;
             console.log('username', this.username);
+            localStorage.setItem('ref:username', this.username);
         });
+        this.router.navigateByUrl('/');
         // window.location.href = 'http://app.share2riches.com/#/ref/' + this.username;
-        window.location.href = 'http://app.share2riches.com/#/authentication/ref/' + this.username;
     }
 }
 RefComponent.ɵfac = function RefComponent_Factory(t) { return new (t || RefComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };

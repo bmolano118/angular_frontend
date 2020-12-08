@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import {Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @Component({
     selector: 'app-header',
@@ -17,6 +17,7 @@ import {Location, LocationStrategy, PathLocationStrategy } from '@angular/common
 export class HeaderComponent implements OnInit {
     location: any;
     layoutClass: string;
+    username: string = '';
 
     constructor(
         private router: Router,
@@ -25,16 +26,21 @@ export class HeaderComponent implements OnInit {
         this.router.events.subscribe((ev) => {
             if (ev instanceof NavigationEnd) {
                 this.location = location.path();
-                if(this.location == '/demo-3'){
+                if (this.location == '/demo-3') {
                     this.layoutClass = 'navbar-style-two';
                 } else {
                     this.layoutClass = '';
                 }
             }
         });
-     }
+    }
 
     ngOnInit() {
+    }
+
+    login() {
+        this.username = localStorage.getItem('ref:username');
+        window.location.href = 'http://app.share2riches.com/#/authentication/ref/' + this.username;
     }
 
 }
