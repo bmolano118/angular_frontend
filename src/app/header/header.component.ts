@@ -36,6 +36,11 @@ export class HeaderComponent implements OnInit {
     }
 
     ngOnInit() {
+        console.log(localStorage.getItem('ref:username'));
+    }
+
+    ngAfterViewInit(){
+        console.log('ref username', localStorage.getItem('ref:username'));
     }
 
     login() {
