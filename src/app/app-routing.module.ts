@@ -17,9 +17,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { RefComponent } from './ref/ref.component';
 
 const routes: Routes = [
-  { path: '', component: DefaultComponent },
+  { path: '', component: DemoThreeComponent },
   { path: 'demo-2', component: DemoTwoComponent },
-  { path: 'demo-3', component: DemoThreeComponent },
+  { path: 'demo-3', component: DefaultComponent },
   { path: 'about-us', component: AboutComponent },
   { path: 'features', component: FeaturesComponent },
   { path: 'team', component: TeamComponent },
@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'ref/:username', component: RefComponent },
   { path: '**', component: NotFoundComponent },
-  
+
 ];
 
 @NgModule({

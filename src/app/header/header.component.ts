@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
     location: any;
     layoutClass: string;
     username: string = '';
-
+    path: string = '';
     constructor(
         private router: Router,
         location: Location,
@@ -39,8 +39,10 @@ export class HeaderComponent implements OnInit {
         console.log(localStorage.getItem('ref:username'));
     }
 
-    ngAfterViewInit(){
+    ngAfterViewInit() {
         console.log('ref username', localStorage.getItem('ref:username'));
+        console.log('location', location.pathname);
+        this.path = location.pathname;
     }
 
     login() {

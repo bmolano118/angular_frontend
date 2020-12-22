@@ -5692,7 +5692,9 @@ Go Top CSS
   transition: .9s;
   color: #ffffff;
 }
-
+.black-color {
+  color: black !important;
+}
 .go-top.active {
   top: 98%;
   -webkit-transform: translateY(-98%);
