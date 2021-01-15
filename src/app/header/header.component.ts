@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(localStorage.getItem('ref:username'));
+        console.log('referral username : ', localStorage.getItem('ref:username'));
     }
 
     ngAfterViewInit() {
@@ -47,7 +47,11 @@ export class HeaderComponent implements OnInit {
 
     login() {
         this.username = localStorage.getItem('ref:username');
-        window.location.href = 'http://app.share2riches.com/#/authentication/ref/' + this.username;
+        if (this.username != null){}
+            // window.location.href = 'http://app.share2riches.com/#/authentication/ref/' + this.username;
+            window.location.href = 'http://localhost:4202/#/authentication/ref/' + this.username;
+
+        // window.location.href = 'http://app.share2riches.com/#/authentication/signin';
     }
 
 }
